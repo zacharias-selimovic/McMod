@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "zacmod:ruby_ore",
+    "zacmod:ruby_block",
+    "zacmod:deepslate_ruby_ore"
+  ]
+}

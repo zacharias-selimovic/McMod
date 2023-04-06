@@ -1,6 +1,10 @@
 package com.zacharias.zacmod;
 
 import com.mojang.logging.LogUtils;
+import com.zacharias.zacmod.block.ModBlock;
+import com.zacharias.zacmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -23,6 +27,8 @@ public class ZacMod
     public ZacMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlock.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -38,6 +44,19 @@ public class ZacMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
 
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlock.RUBY_BLOCK);
+        }
+
+        if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlock.RUBY_ORE);
+            event.accept(ModBlock.DEEPSLATE_RUBY_ORE);
+        }
+
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.ROUGH_RUBY);
+        }
     }
 
 
