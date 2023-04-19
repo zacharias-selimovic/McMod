@@ -1,0 +1,7 @@
+// 1.19.3	2023-04-19T15:22:48.479726	Recipes
+2267c8a25978e4ab01a5ad82028eb69930f3933a data/minecraft/advancements/recipes/building_blocks/ruby.json
+ad7510fe15ea601e14781271220360b267ddfbac data/minecraft/advancements/recipes/misc/ruby_block.json
+137df326e2c15f689103aaa8cc45ef5415c466be data/minecraft/advancements/recipes/misc/ruby_from_smelting_rough_ruby.json
+449c7c849e2cd07a68a9bfdf3534767a4ade928e data/minecraft/recipes/ruby.json
+9f0847e87cb62df5a569782ea77c756f321404d9 data/minecraft/recipes/ruby_block.json
+0984c815d7af73fabe3063fc6699513bb19cafc4 data/minecraft/recipes/ruby_from_smelting_rough_ruby.json
